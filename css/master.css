@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    background: #3b3539;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 20px 0 20px;
+    padding-top: 50px;
+}
+
+.container .heading{
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container .heading  h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: red;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.container .heading  h3 span {
+    color: #222;
+    font-weight: 100;
+}
+
+h3{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 5px 0;
+}
+
+h3::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .box .bikes {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container .box .bikes img {
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.container .btn {
+    margin: 40px 0 70px 0;
+    background: #222;
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
+.container .btn a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 769px){
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .bikes {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 769px){
+    .container .heading{
+        width: 100%;
+    }
+    
+    .container .heading  h3 {
+        font-size: 1em;
+    }
+}
